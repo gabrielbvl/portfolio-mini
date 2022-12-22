@@ -1,0 +1,25 @@
+@use '../mixins'
+
+.projects-container
+    text-align: justify
+
+.button-portfolio
+    display: flex
+    margin: 20px 0 20px 0
+    gap: 20px
+    flex-wrap: wrap
+    @media screen and (max-width: 560px)
+            justify-content: center
+            align-items: center
+
+.btn-portfolio
+    @include mixins.btn
+    border: none
+    font-size: 18px
+    margin-top: 20px
+    width: 200px
+    text-align: center
+    &:hover
+        background: #0033ff88
+        color: #ffffff
+        transition: 1s

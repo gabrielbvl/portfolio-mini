@@ -1,0 +1,59 @@
+@use '../variables'
+@use '../mixins'
+    
+.project-grid
+    @include mixins.center
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    gap: 1.5rem
+        
+
+.project-card
+    @include mixins.center
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    padding: 1rem
+    border: 1px solid #333
+    width: 45%
+    width: 300px
+    border-radius: variables.$card-border-radius
+
+    img
+        width: 250px
+
+    h3
+        color: variables.$text-color
+        margin-bottom: 1rem
+
+    p
+        max-width: 300px
+
+.project-links
+    display: flex
+    justify-content: center
+    gap: 10px
+    width: 70px
+    margin-top: -40px
+
+.buttons-project
+    display: flex
+    margin: 20px 0 20px 0
+    gap: 20px
+    flex-wrap: wrap
+    @media screen and (max-width: 560px)
+            justify-content: center
+            align-items: center
+
+.btn-project
+    @include mixins.btn
+    border: none
+    font-size: 18px
+    margin-top: 20px
+    width: 200px
+    text-align: center
+    &:hover
+        background: #0033ff88
+        color: #ffffff
+        transition: 1s
